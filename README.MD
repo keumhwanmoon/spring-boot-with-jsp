@@ -6,6 +6,8 @@
 - Maven 3.x+
 - Default Encoding: UTF-8
 - Default SCM : git
+- View Template : JSP
+- Layout Template : Tiles3
 
 ## Maven Dependency
 
@@ -19,6 +21,11 @@
 		<artifactId>tomcat-embed-jasper</artifactId>
 		<scope>provided</scope>
 	</dependency>
+	<dependency>
+        <groupId>org.apache.tiles</groupId>
+        <artifactId>tiles-jsp</artifactId>
+        <version>3.0.7</version>
+    </dependency>
 ```
 
 ## application.properties
