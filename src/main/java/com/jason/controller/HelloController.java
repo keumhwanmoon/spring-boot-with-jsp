@@ -13,9 +13,13 @@ import org.springframework.web.servlet.ModelAndView;
 public class HelloController {
 
     @GetMapping(value = "/home")
-    public String home() {
+    public ModelAndView home() {
 
-        return "site.homepage";
+        ModelAndView mv = new ModelAndView("site.homepage");
+
+        mv.addObject("user", "Jason, Moon");
+
+        return mv;
     }
 
     @GetMapping(value = "/greeting")

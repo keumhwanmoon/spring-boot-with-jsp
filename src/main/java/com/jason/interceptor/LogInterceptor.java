@@ -16,7 +16,7 @@ public class LogInterceptor implements HandlerInterceptor {
     private Logger logger = Logger.getLogger(LogInterceptor.class);
 
     @Override
-    public boolean preHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o) throws Exception {
+    public boolean preHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object handler) throws Exception {
 
         logger.info("=============== preHandle Interceptor ===============");
 
@@ -29,13 +29,17 @@ public class LogInterceptor implements HandlerInterceptor {
     }
 
     @Override
-    public void postHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o, ModelAndView modelAndView) throws Exception {
+    public void postHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object handler, ModelAndView mv) throws Exception {
+
+        logger.info("=============== postHandle Interceptor ===============");
+
+        logger.info("User ::: " + mv.getModel().get("user"));
 
         logger.info("=============== postHandle Interceptor ===============");
     }
 
     @Override
-    public void afterCompletion(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o, Exception e) throws Exception {
+    public void afterCompletion(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object handler, Exception e) throws Exception {
 
         logger.info("=============== afterCompletion Interceptor ===============");
     }
