@@ -8,8 +8,7 @@
 - Default SCM : git
 - View Template : JSP
 - Layout Template Framework : Tiles3
-- Template : SB Admin 2
-* * https://blackrockdigital.github.io/startbootstrap-sb-admin-2/pages/index.html
+- Template : [SB Admin 2](https://blackrockdigital.github.io/startbootstrap-sb-admin-2/pages/index.html)
 
 ## Maven Dependency
 
